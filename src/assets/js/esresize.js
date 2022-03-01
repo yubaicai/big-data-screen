@@ -31,7 +31,7 @@ var EleResize = {
   _createResizeTrigger: function (ele) {
     var obj = document.createElement('object')
     obj.setAttribute('style',
-        'display: block; position: absolute; top: 0; left: 0; height: 100%; width: 100%; overflow: hidden;opacity: 0; pointer-events: none; z-index: -1;')
+        'display: block; position: absolute; top: 0; leftchart: 0; height: 100%; width: 100%; overflow: hidden;opacity: 0; pointer-events: none; z-index: -1;')
     obj.onload = EleResize._handleObjectLoad
     obj.type = 'text/html'
     ele.appendChild(obj)

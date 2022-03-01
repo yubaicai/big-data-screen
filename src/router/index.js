@@ -11,10 +11,10 @@ const routes = [
         component: HomeView
     },
     {
-        path: '/about',
-        name: 'about',
-        component: () => import('../views/AboutView.vue')
-    }
+        path: '/left1',
+        name: 'left1',
+        component: () => import('../components/leftchart/left-1.vue')
+    },
 ]
 
 const router = new VueRouter({

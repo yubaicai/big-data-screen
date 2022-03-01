@@ -47,7 +47,7 @@
 .n {
     position: absolute;
     top: 90px;
-    left: 550px;
+    left: 40%;
     color: #06adf1;
     font-size: 12px;
     display: flex;
@@ -79,7 +79,6 @@
 .head_zi1 .sfm {
     font-family: "Digital-7Mono", fantasy;
     font-size: 25px;
-
 }
 
 .head_zi1 .nyr {
@@ -109,7 +108,7 @@
     background-image: url("../img/portrait/bk1.png");
     background-size: 100% 100%;
     width: 25%;
-    height: 91%;
+    height: 100%;
     padding: 15px;
 }
 
@@ -129,35 +128,38 @@
     background-size: 100% 100%;
     padding-left: 1%;
     padding-right: 1%;
-
+    width: 46%;
+    height: 28.2%;
+    position: absolute;
+    bottom: 2%;
+    left: 26.5%;
 }
 
 .content_3_one {
     position: fixed;
     background-size: 100% 100%;
     top: 12%;
-    left: 1%;
+    left: 2%;
     width: 23%;
-    height: 86%;
+    height: 100%;
 }
 
-.content_3_1 {
-    margin-bottom: 3%;
-    padding: 2%;
-}
+
 
 .content_3_two {
     position: fixed;
     top: 12%;
-    left: 75.5%;
+    right: 2%;
     background-size: 100% 100%;
     width: 23%;
-    height: 86%;
+    height: 100%;
 }
 
 .content_3_1 {
-    height: 30%;
+    height: 28%;
     width: 100%;
     background-image: url("../img/portrait/bk3.png");
     background-size: 100% 100%;
+    margin-bottom: 10px;
+    padding: 10px;
 }
