@@ -1,20 +1,21 @@
 <template>
   <div>
-    <div id="main" :style="{ width: '100%', height: '300px' }"></div>
+    <div id="right-line" :style="{ width: '100%', height: '300px' }"></div>
   </div>
 </template>
 
 <script>
 import * as echarts from 'echarts';
+
 export default {
-  name: "left-1",
+  name: "right-3",
   methods: {
     initLine() {
-      const myChart = echarts.init(document.getElementById('main'));
+      const myChart = echarts.init(document.getElementById('right-line'));
       myChart.setOption({
         // 图表标题
         title: {
-          text: "长治市企业数量统计",
+          text: "长治市企业创新统计",
           textStyle: {
             color: "#f2f4f5",
             fontFamily: "PingFang SC",
@@ -30,7 +31,7 @@ export default {
             textStyle: {
               color: "#4d71b9"
             }
-          }
+          },
         },
         // Y轴央视
         yAxis: {
@@ -71,10 +72,9 @@ export default {
         // 数据，样式
         series: [
           {
-            data: [9935, 10898, 2, 0],
+            data: [0, 0, 0, 0],
             type: 'line',
             smooth: true,
-            color: "#2ebaac",
             areaStyle: {
               normal: {
                 // 图表线性渐变

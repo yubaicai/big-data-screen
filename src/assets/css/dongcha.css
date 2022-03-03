@@ -46,21 +46,23 @@
 
 .n {
     position: absolute;
-    top: 90px;
-    left: 40%;
+    top: 110px;
+    left: 38%;
     color: #06adf1;
-    font-size: 12px;
+    font-size: 15px;
     display: flex;
     justify-content: space-around;
-    width: 400px;
+    width: 500px;
 }
 
 .n_n {
     text-align: center;
-    width: 80px;
-    height: 20px;
+    line-height: 30px;
+    width: 100px;
+    height: 30px;
     background-image: url("../img/portrait/bk5.png");
     background-size: 100% 100%;
+    margin-right: 40px;
 }
 
 .head_xzk select {

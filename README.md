@@ -1,19 +1,8 @@
-# big-data-screen
+# Vue数据大屏
 
-## Project setup
-```
-npm install
-```
+启动方式
 
-### Compiles and hot-reloads for development
-```
-npm run serve
+```npm
+npm run server
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

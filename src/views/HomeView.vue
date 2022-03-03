@@ -37,17 +37,25 @@
         <div class="content_3_1">
           <left2/>
         </div>
-        <div class="content_3_1">zxc</div>
+        <div class="content_3_1">
+          <left3/>
+        </div>
       </div>
     </div>
     <div class="content_2">
-      456
+
     </div>
     <div class="right">
       <div class="content_3_two">
-        <div class="content_3_1">123</div>
-        <div class="content_3_1">123</div>
-        <div class="content_3_1">123</div>
+        <div class="content_3_1">
+          <right1/>
+        </div>
+        <div class="content_3_1">
+          <right2/>
+        </div>
+        <div class="content_3_1">
+          <right3/>
+        </div>
       </div>
     </div>
     <div id="container"></div>
@@ -55,8 +63,13 @@
 </template>
 
 <script>
-import heatmapData from '../assets/js/heatmapData';
+import {heatmapData} from '@/assets/js/heatmapData';
+import Right1 from "@/components/rightchart/right-1";
+import Right3 from "@/components/rightchart/right-3";
+import Left3 from "@/components/leftchart/left-3";
+
 export default {
+  components: {Left3, Right3, Right1},
   data() {
     return {
       options: [],
@@ -103,36 +116,29 @@ export default {
     initMap() {
       this.map = new AMap.Map("container", {
         resizeEnable: true,
-        center: [-246.94836884737012, 36.1322630994299],
+        center: [116.418261, 39.921984],
         zoom: 11,
         mapStyle: 'amap://styles/darkblue', // 马卡龙(其他样式可在高德api中查找进行修改)
         //自定义地图样式：https://lbs.amap.com/dev/mapstyle/index
       });
     },
-    //判断浏览区是否支持canvas
-    isSupportCanvas() {
-      let elem = document.createElement("canvas");
-      return !!(elem.getContext && elem.getContext("2d"));
-    },
     createHeatMap() {
-      if (!this.isSupportCanvas()) {
-        return this.$message({
-          message: '热力图仅对支持canvas的浏览器适用,您所使用的浏览器不能使用热力图功能,请换个浏览器试试。',
-          type: 'warning'
-        });
-      }
       let __this = this;
       this.map.plugin(["AMap.Heatmap"], function () {
         //初始化heatmap对象
         __this.heatmap = new AMap.Heatmap(__this.map, {
           radius: 25, //给定半径
           opacity: [0, 0.8],
-        });
-        //设置数据集：该数据为北京部分“公园”数据
-        __this.heatmap.setDataSet({
+          // 设置数据
+        }).setDataSet({
           data: heatmapData,
           max: 100
         });
+        //设置数据集
+        /*__this.heatmap.setDataSet({
+          data: heatmapData,
+          max: 100
+        });*/
       });
     },
   },
